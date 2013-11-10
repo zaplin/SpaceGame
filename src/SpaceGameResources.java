@@ -17,6 +17,15 @@ public class SpaceGameResources{
 	  
 	  System.out.println("you have " + amount + "/" + maxAmount + " " + resourceName);
   }
+  
+  public void capacityCheck(){
+	  
+	  if(amount > maxAmount){
+		  
+		  amount = maxAmount;
+		  System.out.println(resourceName + " exceeded capacity");
+	  }
+  }
 					
   public int getAmount() {
 	  return amount;

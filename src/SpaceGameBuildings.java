@@ -1,109 +1,45 @@
 public class SpaceGameBuildings{
 	
-	private int solarFarms;
-	private int coalMines;
-	private int ironMines;
-	private int ironRefineries;
-	private int laboratories;
+	private int amount;
+	private String buildingName;
 	
-	private int capacitors;
-	private int coalBins;
-	private int ironOreBins;
-	private int ironBarBins;
+	public SpaceGameBuildings(int am, String name){
+		
+		amount = am;
+		buildingName = name;
+	}
 	
-	public SpaceGameBuildings(int sFarms, int cMines, int iMines, int iRef, int lab, int cap, int cBin, int iOreBin, int iBarBin){
+	public void build(){
 		
-		solarFarms = sFarms;
-		coalMines = cMines;
-		ironMines = iMines;
-		ironRefineries = iRef;
-		laboratories = lab;
+		amount++;
+	}
+	
+	public void update(){
 		
-		capacitors = cap;
-		coalBins = cBin;
-		ironOreBins = iOreBin;
-		ironBarBins = iBarBin;
-		
-				
 	}
 	
 	public void printBuildings(){
 		
-		System.out.println("you have " + solarFarms + " solar farms");
-		System.out.println("you have " + coalMines + " coal mines");
-		System.out.println("you have " + ironMines + " iron mines");
-		System.out.println("you have " + ironRefineries + " refineries");
-		System.out.println("you have " + laboratories + " laboratories");
-	}
-	
-	public int getSolarFarms(){
+		if(amount > 0){
 		
-		return solarFarms;
+			System.out.println("you have " + amount + " " + buildingName);
+		}
 	}
-	
-	public int getCoalMines(){
-		
-		return coalMines;
+
+	public int getAmount() {
+		return amount;
 	}
-	
-	public int getIronMines(){
-		
-		return ironMines;
+
+	public String getBuidlingName() {
+		return buildingName;
 	}
-	
-	public int getIronRefineries(){
-		
-		return ironRefineries;
+
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
-	
-	public int getLaboratories(){
-		
-		return laboratories;
-	}
-	
-	public int getCapacitors(){
-		
-		return capacitors;
-	}
-	
-	public int getCoalBins(){
-		
-		return coalBins;
-	}
-	
-	public int getIronOreBins(){
-		
-		return ironOreBins;
-	}
-	
-	public int getIronBarBins(){
-		
-		return ironBarBins;
-	}
-	
-	public void setSolarFarms(int sFarm){
-		
-		solarFarms = sFarm;
-	}
-	
-	public void setCoalMines(int cMine){
-		
-		coalMines = cMine;
-	}
-	
-	public void setIronMines(int iMines){
-		
-		ironMines = iMines;
-	}
-	
-	public void setIronRefineries(int iRef){
-		
-		ironRefineries = iRef;
-	}
-	
-	public void setCapacitors(int cap){
-		
-		capacitors = cap;
+
+	public void setBuildingName(String buildingName) {
+		this.buildingName = buildingName;
 	}
 		
 	
